@@ -12,3 +12,6 @@ mkdir /var/run/cloud-sql-proxy
 chown root:root /var/run/cloud-sql-proxy
 mkdir /var/local/cloud-sql-proxy
 chown root:root /var/local/cloud-sql-proxy
+
+# Install service file to correct folder
+cp ./cloud-sql-proxy.service /etc/systemd/system/network-online.target.wants
