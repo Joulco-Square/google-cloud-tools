@@ -9,7 +9,7 @@ WantedBy = multi-user.target
 [Service]
 Type=simple
 WorkingDirectory=/usr/local/bin
-ExecStart=/usr/local/bin/cloud_sql_proxy -dir=/var/run/cloud-sql-proxy -instances=<INSTANCE-CONNECTION_NAME>=$
+ExecStart=/usr/local/bin/cloud_sql_proxy -dir=/var/run/cloud-sql-proxy -instances=<INSTANCE_CONNECTION_NAME>=tcp:3306 -credential_file=<PATH_TO_KEY_FILE>
 Restart=always
 StandardOutput=journal
 User=root
